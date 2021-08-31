@@ -131,7 +131,6 @@ export async function getDirectoryContentsRaw(
         ${paginationSql};
       `
 
-  console.log("file: service.ts ~ line 135 ~ results", results)
   return results.map((result) => ({
     ...result,
     type: result.type === "1" ? "Directory" : "File",
